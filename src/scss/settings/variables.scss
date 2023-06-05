@@ -1,0 +1,35 @@
+// for mixin
+$minWidth: 320;
+$maxWidth: 1220;
+$maxWidthContainer: 1200;
+
+// for @media
+$sm-min-content: 320px;
+$sm-max-content: 480.99px;
+$md-min-content: 481px;
+$md-max-content: 992.99px;
+$lg-min-content: 993px;
+$lg-max-content: 1200px;
+
+// for CSS
+:root {
+  --base-font-size: 1.4rem;
+  --base-line-height: 1.2;
+  --base-background: #fff;
+  --main-color-text: #848e97;
+  --second-color-text: #8d81ac;
+  --active-color-text: #fff;
+  --main-white-text: #fff;
+  --main-dark-text: #323232;
+
+  --min-content: 320px;
+  --max-content: 1200px;
+  --container-padding: 10px;
+
+  --sm-min-content: 320px;
+  --sm-max-content: 480.99px;
+  --md-min-content: 481px;
+  --md-max-content: 992.99px;
+  --lg-min-content: 993px;
+  --lg-max-content: 1200px;
+}

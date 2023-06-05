@@ -1,0 +1,184 @@
+.revolution-editor {
+  background: #fff;
+}
+
+.revolution-editor__content {
+  text-align: center;
+  position: relative;
+  padding: 13rem 0 6rem;
+
+  .revolution-editor__download-free {
+    position: absolute;
+    top: -2.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .download-free__btn {
+      font-size: 1.8rem;
+      padding: 1.1rem 3rem;
+      border-radius: 4rem;
+      white-space: nowrap;
+    }
+
+    .download-free__subtext {
+      font-size: 1.4rem;
+      margin-top: 1.8rem;
+    }
+  }
+
+  .revolution-editor__title {
+    @include adaptiv-value('font-size', 54, 26, 1);
+    text-transform: uppercase;
+    color: #635c73;
+    margin-bottom: 3.5rem;
+  }
+  .revolution-editor__text {
+    font-family: Lato;
+    @include adaptiv-value('font-size', 21, 14, 1);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: var(--main-dark-text);
+  }
+
+  .revolution-editor__watch-star-fork {
+    color: var(--main-dark-text);
+    font-size: 1.3rem;
+    @include flex-center;
+    gap: .875rem;
+    row-gap: 2rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    .watch-star-fork__item {
+      padding: 0.9rem 0 0.6rem;
+    }
+
+    .watch,
+    .star,
+    .fork {
+      border: 1px solid #d5d5d5;
+      border-radius: 5px;
+      text-transform: capitalize;
+      font-weight: bold;
+      padding: 0.9rem 0 0.6rem;
+      cursor: pointer;
+      text-decoration: none;
+      color: var(--main-dark-text);
+
+      .icon {
+        padding: 0.7rem 1.2rem;
+        border-right: 1px solid #d5d5d5;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        background: linear-gradient(#fcfcfc, #ececed);
+      }
+
+      .count {
+        padding: 0.7rem 1.2rem;
+      }
+    }
+  }
+}
+
+// medium screen size
+@media screen and (min-width: $md-min-content) and (max-width: $md-max-content) {
+  .revolution-editor__content {
+    padding: 13rem 0 10rem;
+
+    .revolution-editor__download-free {
+      top: -3.3rem;
+
+      .download-free__btn {
+        font-size: 2.1rem;
+        padding: 1.8rem 6.1rem;
+        border-radius: 4rem;
+      }
+
+      .download-free__subtext {
+        font-size: 1.4rem;
+        margin-top: 1.8rem;
+      }
+    }
+
+    .revolution-editor__title {
+      margin-bottom: 3.5rem;
+    }
+    .revolution-editor__text {
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .revolution-editor__watch-star-fork {
+      font-size: 1.3rem;
+      gap: 1rem;
+      flex-direction: row;
+
+      .watch,
+      .star,
+      .fork {
+        padding: 0.9rem 0 0.6rem;
+
+        .icon {
+          padding: 0.7rem 1.2rem;
+        }
+
+        .count {
+          padding: 0.7rem 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+// large screen size
+@media screen and (min-width: $lg-min-content) {
+  .revolution-editor__content {
+    padding: 13rem 0 7rem;
+
+    .revolution-editor__download-free {
+      top: -3.3rem;
+
+      .download-free__btn {
+        font-size: 2.1rem;
+        padding: 1.8rem 6.1rem;
+        border-radius: 4rem;
+        border-width: 2px;
+      }
+
+      .download-free__subtext {
+        font-size: 1.4rem;
+        margin-top: 1.8rem;
+      }
+    }
+
+    .revolution-editor__title {
+      // font-size: 5.4rem;
+      margin-bottom: 3.5rem;
+    }
+    .revolution-editor__text {
+      // font-size: 2.1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .revolution-editor__watch-star-fork {
+      font-size: 1.3rem;
+      gap: 1rem;
+      flex-direction: row;
+
+      .watch,
+      .star,
+      .fork {
+        padding: 0.9rem 0 0.6rem;
+
+        .icon {
+          padding: 0.7rem 1.2rem;
+        }
+
+        .count {
+          padding: 0.7rem 1.2rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,143 @@
+.fork-price {
+  background: url('@img/bg/price-bg.png');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.fork-price__content {
+  text-align: center;
+  @include adaptiv-value('padding-top', 108, 56, 1);
+  padding-bottom: 1rem;
+
+  .fork-price__title {
+    color: var(--main-white-text);
+    @include adaptiv-value('font-size', 48, 36, 1);
+    @include adaptiv-value('margin-bottom', 84, 52, 1);
+  }
+
+  .fork-price__offer {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 0 0 6rem;
+
+    .offer__item {
+      color: var(--main-white-text);
+      background: rgba($color: #fff, $alpha: 0.11);
+      width: 100%;
+      max-width: 257px;
+
+      .offer__item-header {
+        text-transform: uppercase;
+        background: rgba($color: #fff, $alpha: 0.06);
+
+        padding: 3.3rem 0.8rem;
+        font-size: 2.4rem;
+      }
+
+      .offer__item-price {
+        position: relative;
+
+        padding: 2.5rem 0 3.3rem;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          height: 5px;
+          width: 60px;
+          background: #8d81ac;
+        }
+      }
+
+      .price-value {
+        font-weight: bold;
+
+        font-size: 6rem;
+        margin: 0 0 2rem;
+        span {
+          font-weight: normal;
+        }
+      }
+
+      .price-month {
+        text-transform: uppercase;
+
+        font-size: 1.4rem;
+      }
+
+      .offer__item-description {
+        text-transform: capitalize;
+
+        height: 4rem;
+        margin: 2.4rem 1rem;
+        font-size: 1.6rem;
+      }
+
+      .offer__item-purchase {
+        margin: 2.6rem 1rem 3.6rem;
+        font-weight: normal;
+      }
+
+      &.active {
+        max-width: 300px;
+        background: rgba($color: #463048, $alpha: 0.84);
+
+        .offer__item-header {
+          padding: 4.15rem 1rem;
+          background: rgba($color: #000, $alpha: 0.11);
+        }
+        .offer__item-price {
+          padding: 1rem 0 5rem;
+        }
+
+        .price-value {
+          font-size: 8.2rem;
+          margin: 0 0 1rem;
+        }
+
+        .offer__item-description {
+          margin: 4rem 0;
+        }
+
+        .offer__item-purchase {
+          margin: 5.6rem 1rem 4.4rem;
+        }
+      }
+    }
+  }
+}
+
+// medium screen size
+@media screen and (min-width: $md-min-content) and (max-width: $md-max-content) {
+  .fork-price__content {
+    .fork-price__offer {
+      grid-template-columns: repeat(2, 1fr);
+
+      .offer__item {
+        &:nth-child(odd) {
+          justify-self: end;
+        }
+        &:nth-child(even) {
+          justify-self: start;
+        }
+      }
+    }
+  }
+}
+
+// large screen size
+@media screen and (min-width: $lg-min-content) {
+  .fork-price__content {
+    .fork-price__offer {
+      margin: 0 3.1rem 6rem;
+      grid-template-columns: 1fr 1fr 1.16fr 1fr;
+      gap: 1.5rem;
+    }
+  }
+}

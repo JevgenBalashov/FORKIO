@@ -1,0 +1,80 @@
+.people-about {
+  background: #4b3b4e url('@img/bg/about-bg.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+
+.people-about__content {
+  text-align: center;
+  @include adaptiv-value('padding-top', 108, 56, 1);
+  padding-bottom: 1rem;
+
+  .people-about__title {
+    color: var(--main-white-text);
+    @include adaptiv-value('font-size', 48, 36, 1);
+    @include adaptiv-value('margin-bottom', 84, 52, 1);
+  }
+
+  .people-about__companies {
+    display: grid;
+    justify-items: center;
+    align-items: end;
+    grid-template-columns: repeat(1, 1fr);
+    @include adaptiv-value('gap', 100, 44, 1);
+    @include adaptiv-value('margin-bottom', 116, 36, 1);
+
+    .companies__item {
+      .item-logo {
+        margin: 0 0 3rem;
+      }
+
+      .item-text {
+        font-family: Lato;
+        color: var(--main-white-text);
+        font-style: italic;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+      }
+    }
+  }
+
+  .people-about__subtitle {
+    font-family: Lato;
+    color: #a291a5;
+    position: relative;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    padding: 0 13%;
+    margin: 0 0 5rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 65%;
+      height: 2px;
+      background: #645766;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -1.8rem;
+    }
+  }
+}
+
+// medium screen size
+@media screen and (min-width: $md-min-content) and (max-width: $md-max-content) {
+  .people-about__content {
+    .people-about__companies {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+// large screen size
+@media screen and (min-width: $lg-min-content) {
+  .people-about__content {
+    .people-about__companies {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
