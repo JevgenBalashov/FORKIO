@@ -10,7 +10,7 @@
     "reset": "gulp reset"
   },
   "keywords": [],
-  "author": "Dmytro Portnov",
+  "author": "Balashov Jevgen",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.20.2",
